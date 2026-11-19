@@ -1,0 +1,84 @@
+:root {
+  --fondo: #14161c; --panel: #1d2029; --borde: #2c3140; --texto: #e8eaf0;
+  --tenue: #8a91a5; --acento: #ff8a3d; --acento2: #ff9d5c; --rosa: #ff7a9c;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--fondo); color: var(--texto);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans CJK SC", sans-serif;
+  background-image: radial-gradient(1200px 500px at 70% -10%, rgba(255,138,61,.13), transparent 60%);
+}
+a { color: var(--acento2); }
+.barra {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  max-width: 1120px; margin: 0 auto; padding: 18px 20px;
+}
+.marca { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; }
+.idioma { display: flex; align-items: center; gap: 8px; color: var(--tenue); font-size: 13px; }
+select {
+  background: var(--panel); color: var(--texto); border: 1px solid var(--borde);
+  border-radius: 8px; padding: 7px 10px; font: inherit; font-size: 14px;
+}
+select:focus { outline: 2px solid var(--acento); outline-offset: 1px; }
+main { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+section { margin: 64px 0; }
+h1 { font-size: clamp(30px, 4.4vw, 48px); line-height: 1.12; margin: 0 0 16px; letter-spacing: -.02em; }
+h2 { font-size: 24px; margin: 0 0 16px; }
+h3 { font-size: 17px; margin: 8px 0 6px; }
+.hero { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: center; margin-top: 28px; }
+.lead { color: #c9cdd8; font-size: 18px; margin: 0 0 26px; }
+.botones { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+  background: #2a2f3d; color: var(--texto); border: 1px solid var(--borde);
+  padding: 12px 18px; border-radius: 10px; font-weight: 600;
+}
+.btn:hover { background: #343a4b; }
+.btn.primario { background: var(--acento); color: #1a1208; border-color: transparent; }
+.btn.primario:hover { background: var(--acento2); }
+.btn.apoyar { background: transparent; border-color: #e0557a; color: var(--rosa); }
+.btn.apoyar:hover { background: #3a1f2a; }
+.so { font-size: 18px; line-height: 1; }
+.meta { color: var(--tenue); font-size: 14px; margin-top: 14px; }
+.captura { margin: 0; }
+.captura img {
+  width: 100%; height: auto; display: block; border-radius: 14px;
+  border: 1px solid var(--borde); box-shadow: 0 30px 80px rgba(0,0,0,.5);
+}
+.tarjetas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.tarjetas article, .panel {
+  background: var(--panel); border: 1px solid var(--borde); border-radius: 14px; padding: 20px;
+}
+.tarjetas p, .panel p, .pasos p { color: #c3c7d3; margin: 0; }
+.ico { font-size: 26px; }
+.pasos { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pasos li { display: flex; gap: 14px; align-items: flex-start; background: var(--panel); border: 1px solid var(--borde); border-radius: 14px; padding: 18px; }
+.num {
+  flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--acento); color: #1a1208; font-weight: 800;
+}
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.dos .panel h2, section.panel h2 { font-size: 20px; }
+.hash-titulo { margin-top: 14px !important; color: var(--tenue) !important; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+.hashes { margin: 6px 0 0; font-size: 12px; }
+.hashes dt { color: var(--texto); margin-top: 6px; }
+.hashes dd { margin: 0; font-family: ui-monospace, "Cascadia Mono", monospace; color: var(--tenue); word-break: break-all; }
+pre {
+  background: var(--fondo); border: 1px solid var(--borde); border-radius: 10px;
+  padding: 14px; overflow-x: auto; margin: 14px 0 0; font-size: 14px;
+}
+.apoyo { text-align: center; }
+.apoyo p { color: #c3c7d3; margin: 0 0 18px; }
+footer { max-width: 1120px; margin: 40px auto 0; padding: 28px 20px 40px; border-top: 1px solid var(--borde); color: var(--tenue); font-size: 13px; }
+@media (max-width: 900px) {
+  .hero, .dos { grid-template-columns: 1fr; }
+  .tarjetas { grid-template-columns: 1fr 1fr; }
+  .pasos { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .tarjetas { grid-template-columns: 1fr; }
+  .barra { padding: 14px 16px; }
+  main { padding: 0 16px; }
+  .btn { width: 100%; justify-content: center; }
+}

@@ -5,3 +5,4 @@ build/
 salida/
 *.exe
 *.tar.gz
+.firebase/

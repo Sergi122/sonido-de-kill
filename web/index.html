@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sonido de Kill — War Thunder</title>
+<meta name="description" content="Un sonido cada vez que haces una kill en War Thunder. Windows y Linux, en los 20 idiomas del juego.">
+<meta property="og:title" content="Sonido de Kill">
+<meta property="og:description" content="Tu sonido en cada kill de War Thunder · Windows y Linux · 20 idiomas">
+<meta property="og:image" content="https://sonido-de-kill.web.app/img/app_es.webp">
+<link rel="icon" href="img/icono.svg" type="image/svg+xml">
+<link rel="stylesheet" href="estilo.css">
+<script src="textos.js" defer></script>
+<script src="pagina.js" defer></script>
+</head>
+<body>
+<header class="barra">
+  <div class="marca"><img src="img/icono.svg" alt="" width="28" height="28"><span data-t="app">Sonido de Kill</span></div>
+  <label class="idioma"><span data-t="idioma">Idioma</span>
+    <select id="idioma" aria-label="Idioma / Language"></select>
+  </label>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-texto">
+      <h1 data-t="titulo">Tu sonido en cada kill de War Thunder</h1>
+      <p class="lead" data-t="lead"></p>
+      <div class="botones">
+        <a class="btn primario" id="dl-win" href="#"><span class="so">⊞</span><span data-t="win">Descargar para Windows</span></a>
+        <a class="btn" id="dl-linux" href="#"><span class="so">🐧</span><span data-t="linux">Descargar para Linux</span></a>
+      </div>
+      <p class="meta"><span id="meta"></span> · <a id="versiones" href="#" data-t="versiones">Todas las versiones</a></p>
+    </div>
+    <figure class="captura">
+      <img id="captura" src="img/app_es.webp" width="1060" height="753" alt="">
+    </figure>
+  </section>
+
+  <section>
+    <h2 data-t="que">Qué hace</h2>
+    <div class="tarjetas">
+      <article><div class="ico">🎵</div><h3 data-t="f1t"></h3><p data-t="f1d"></p></article>
+      <article><div class="ico">✂️</div><h3 data-t="f2t"></h3><p data-t="f2d"></p></article>
+      <article><div class="ico">🔊</div><h3 data-t="f3t"></h3><p data-t="f3d"></p></article>
+      <article><div class="ico">🌐</div><h3 data-t="f4t"></h3><p data-t="f4d"></p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-t="pasos">En 3 pasos</h2>
+    <ol class="pasos">
+      <li><span class="num">1</span><p data-t="p1"></p></li>
+      <li><span class="num">2</span><p data-t="p2"></p></li>
+      <li><span class="num">3</span><p data-t="p3"></p></li>
+    </ol>
+  </section>
+
+  <section class="dos">
+    <div class="panel"><h2 data-t="como">Cómo funciona</h2><p data-t="comod"></p></div>
+    <div class="panel"><h2 data-t="seguro">¿Es seguro?</h2><p data-t="segurod"></p>
+      <p class="hash-titulo">SHA-256</p>
+      <dl class="hashes" id="hashes"></dl>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 data-t="linuxt">En Linux</h2>
+    <p data-t="linuxd"></p>
+    <pre><code>tar xzf SonidoDeKill-<span class="ver"></span>-linux.tar.gz
+cd sonido-de-kill &amp;&amp; ./instalar.sh</code></pre>
+  </section>
+
+  <section class="apoyo">
+    <h2 data-t="apoyot">¿Te gusta?</h2>
+    <p data-t="apoyod"></p>
+    <a class="btn apoyar" href="https://github.com/sponsors/Sergi122" rel="noopener" data-t="apoyar">❤ Apoyar</a>
+  </section>
+</main>
+
+<footer>
+  <a href="https://github.com/Sergi122/sonido-de-kill" rel="noopener" data-t="codigo">Código fuente en GitHub</a>
+  <p data-t="nota"></p>
+</footer>
+</body>
+</html>
