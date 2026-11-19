@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+dist/
+build/
+salida/
+*.exe
+*.tar.gz

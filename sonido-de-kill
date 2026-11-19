@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Abre la app (o, con "detector", corre el servicio que escucha las kills).
+cd "$(dirname "$(readlink -f "$0")")"
+if [ "${1:-}" = "detector" ]; then shift; exec python3 -s -m killsound.detector "$@"; fi
+exec python3 -s -m killsound.app "$@"
